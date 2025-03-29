@@ -4,12 +4,14 @@
     "extensions": [
         "dbaeumer.vscode-eslint"
     ],
+    "mounts": [
+        "source=${localEnv:SSH_AUTH_SOCK},target=${localEnv:SSH_AUTH_SOCK},type=bind"
+    ],
     "forwardPorts": [
         22,
         3000
     ],
-    "postCreateCommand": "npm install",
     "remoteEnv": {
-        "SSH_AUTH_SOCK": "${containerEnv:SSH_AUTH_SOCK}"
+        "SSH_AUTH_SOCK": "${localEnv:SSH_AUTH_SOCK}"
     }
 }
