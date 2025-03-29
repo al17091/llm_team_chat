@@ -1,0 +1,11 @@
+{
+    "name": "team-llms-chat-dev",
+    "image": "node:20",
+    "extensions": [
+        "dbaeumer.vscode-eslint"
+    ],
+    "forwardPorts": [
+        3000
+    ],
+    "postCreateCommand": "npm install"
+}
